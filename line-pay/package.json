@@ -1,0 +1,41 @@
+{
+  "name": "line-pay",
+  "version": "1.0.15",
+  "description": "SDK to use LINE Pay API in node.js app",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node sample-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkjm/line-pay.git"
+  },
+  "keywords": [
+    "payment",
+    "pay",
+    "line"
+  ],
+  "author": "Kazuki Nakajima",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nkjm/line-pay/issues"
+  },
+  "homepage": "https://github.com/nkjm/line-pay#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "debug": "^3.1.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.17.0",
+    "express-session": "^1.15.6",
+    "lossless-json": "^1.0.1",
+    "memory-cache": "^0.2.0",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^4.0.1",
+    "uuid": "^3.1.0"
+  }
+}
