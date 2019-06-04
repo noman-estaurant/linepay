@@ -32,11 +32,11 @@ router.get("/bang", (req, res, next) => {
         }
     }
 
-    let productName = req.query.productName || "黑膠鮮檸鮭魚堡";
-    let amount = Number(req.query.amount) || 160;
+    let productName = req.query.productName || "黑膠鮮檸鮭魚堡"; //這裡預計改成我們的餐廳名稱
+    let amount = Number(req.query.amount) || 160; //總金額，可以用AJAX
 
     let options = {
-        productImageUrl:'https://i.imgur.com/aww9AwK.jpg',
+        productImageUrl:'https://i.imgur.com/aww9AwK.jpg', //這裡改成我們的LOGO
         productName: productName,
         amount: amount,
         currency: "TWD",
@@ -59,8 +59,9 @@ router.get("/bang", (req, res, next) => {
     })
 });
 
+//我們到時候變成https就可以跳轉順利了
 router.get("/confirm", (req, res, next) => {
-    res.send("Hello Amigo!")
+    res.send("Hello Amigo!") 
 
     debug(`transactionId is ${req.query.transactionId}`);
     let reservation = cache.get(req.query.transactionId);
